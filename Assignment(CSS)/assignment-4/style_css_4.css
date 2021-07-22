@@ -1,0 +1,25 @@
+span{
+	color: #ff0000;
+}
+h1{
+	line-height: 10px;
+}
+.contact{
+	column-width: 100px;
+}
+.personal{
+	column-width:100px;
+}
+fieldset{
+	background-color: rgb(249,249,249);;
+}
+td{
+	column-width: 50%;
+	width: 50%;
+}
+legend{
+	
+	font-weight: bold;
+	font-size: 19px;
+	font-variant: small-caps;
+}
