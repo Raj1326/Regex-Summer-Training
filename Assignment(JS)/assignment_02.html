@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Javascript assignment 2</title>
+	<style type="text/css">
+		input{
+			padding :3px;
+			margin: 5px;
+		}
+	</style>
+</head>
+<body>
+	<form onsubmit="fun();">
+		<label>Enter number of calls</label>
+		<input type="number" name="call" id="i_call" value =" ">
+		<br><label>Enter SMS </label>
+		<input type="number" name="sms" id="i_sms" value =" ">
+		<br><button type="submit">Submit</button>
+	</form>
+	<script type="text/javascript">
+		function fun(){
+			let call = document.getElementById('i_call').value;
+			//alert("call;"+call);
+			let sms = document.getElementById('i_sms').value;
+			let charge_call = 0;
+			let charge_sms = 0;
+			//call charge
+			if(call > 300)
+			{
+				charge_call += (call-300) * .95;
+				call = 300;
+			}
+			
+			if(call > 150 && call <= 300)
+			{
+				charge_call += (call-150) * .85;
+				call = 150;
+			}
+			
+			if(call > 50 && call <= 150)
+			{
+				charge_call += (call-50) * .70;
+				call = 50;
+			}
+			
+			if(call > 0 )
+			{
+				charge_call += (call) * .50;
+
+			}
+			//sms charge
+			if(sms > 400)
+			{
+				charge_sms += (sms-400) * .45;
+				sms = 400;
+			}
+			
+			if(sms > 200 && sms <= 400)
+			{
+				charge_sms += (sms-200) * .40;
+				sms = 200;
+			}
+			
+			if(sms > 50 && sms <= 200)
+			{
+				charge_sms += (sms-50) * .25;
+				sms = 50;
+			}
+			
+			alert("Charges for call : " + charge_call + "/-\n" + "Charges for sms :" + charge_sms + "/-\n" + "Total charges : " + (charge_call +charge_sms) + "/-\n");
+		}
+		</script>
+</body>
+</html>

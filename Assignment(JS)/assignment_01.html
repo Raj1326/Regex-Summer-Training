@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>assignment find and replace </title>
+	<style type="text/css">
+		input{
+			padding :3px;
+			margin: 5px;
+		}
+	</style>
+</head>
+<body>
+		<label>Enter test: </label>
+		<input type="text" name="txt" id="i_text" value =" " ><br><label>Enter word to replace:</label>
+		<input type="text" name="word" id="i_word">
+		<br><label>Enter word to replaced with:
+		<input type="text" name="replace" id="i_replace">
+		<br><button type="submit" onclick="fun();">Replace</button>
+	
+		<script type="text/javascript">
+		function fun(){
+			var txt = document.getElementById('i_text').value;
+			var word = document.getElementById('i_word').value;
+			var replace = document.getElementById('i_replace').value;
+			//alert(txt);
+			//alert(word);
+			var result = txt.replaceAll(word,replace);
+			document.getElementById('i_text').value = result;
+			//alert(document.getElementById('i_text').value);
+		}
+		</script>
+	
+</body>
+</html>
